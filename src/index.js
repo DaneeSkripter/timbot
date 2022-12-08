@@ -1,9 +1,13 @@
+
 require('dotenv').config();
 const { GClient, Plugins, Command, Component } = require('gcommands');
 const { GatewayIntentBits } = require('discord.js');
 const { join } = require('path');
 
 // Set the default cooldown for commands
+Command.setDefaults({
+	cooldown: '1s',
+});
 
 // Set the default onError function for components
 Component.setDefaults({
@@ -35,6 +39,4 @@ const client = new GClient({
 	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
 });
 
-
-// Login to the discord API
 client.login(process.env.TOKEN);

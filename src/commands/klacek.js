@@ -1,3 +1,4 @@
+
 const { Command, CommandType } = require('gcommands');
 const Discord = require("discord.js")
 // Create a new command with the name 'hello'
@@ -9,12 +10,12 @@ new Command({
 	// The function thats executed when the user uses the command.
 	run: (ctx) => {
 		const responses = [ "Tady máš!", "Ne! Ten je teď můj..", "Chyť si mě!"]
-        const num = Math.floor(Math.random() * 3) + 1
-        console.log(num)
+        const num = Math.floor(Math.random() * 2) 
         const embed = new Discord.EmbedBuilder()
         .setColor("Random")
         .setTitle(responses[num])
         .setDescription("*Tady bude obrazek tima, na zaklade odpovedi*")
         ctx.reply({ embeds: [embed]})
 	}
+
 });
