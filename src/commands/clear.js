@@ -20,6 +20,6 @@ new Command({
         const embed = new Discord.EmbedBuilder()
         .setColor("Random")
         .setTitle(`Sežráno ${ctx.arguments.getInteger("pocetzprav")} zpráv!`)
-        ctx.reply({ embeds: [embed]})
+        ctx.reply({ embeds: [embed], ephemeral: true})
 	}
 });
