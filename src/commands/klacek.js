@@ -10,7 +10,7 @@ new Command({
 	// The function thats executed when the user uses the command.
 	run: (ctx) => {
 		const responses = [ "Tady máš!", "Ne! Ten je teď můj..", "Chyť si mě!"]
-        const num = Math.floor(Math.random() * 2) 
+        const num = Math.floor(Math.random() * responses.length) 
         const embed = new Discord.EmbedBuilder()
         .setColor("Random")
         .setTitle(responses[num])
