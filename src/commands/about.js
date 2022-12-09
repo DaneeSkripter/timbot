@@ -12,7 +12,7 @@ new Command({
         const embed = new Discord.EmbedBuilder()
         .setColor("Random")
         .addFields(
-        { name: "Uptime", value: ms(ctx.client.uptime, { long: true}), inline: true},
+        { name: "Uptime", value: ms(ctx.client.uptime, { long: true}).replace("seconds", "sekund").replace("minutes", "minut").replace("hours", "hodin").replace("days", "dnů"), inline: true},
         { name: "Verze", value: "in progress", inline: true},
         { name: "Vývojář", value: "DaneeSkripter", inline: true}
             )
