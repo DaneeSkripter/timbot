@@ -1,4 +1,3 @@
-
 require('dotenv').config();
 const { GClient, Plugins, Command, Component } = require('gcommands');
 const { GatewayIntentBits } = require('discord.js');
